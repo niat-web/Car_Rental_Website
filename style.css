@@ -1,0 +1,155 @@
+/* style.css */
+ 
+
+ :root {
+  --primary-color: black;
+  --secondary-color: #FFC107;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+  --dark-bg-color: #343a40;
+  --dark-text-color: #fff;
+  --accent-color: #007bff;
+ }
+ 
+
+ [data-theme="dark"] {
+  --primary-color: #fff;
+  --secondary-color: #FFC107;
+  --text-color: #eee;
+  --bg-color: #343a40;
+  --dark-bg-color: #222;
+  --dark-text-color: #fff;
+ }
+ 
+
+ body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+ }
+ 
+
+ /* Header */
+ header {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+ }
+ 
+
+ /* Main Content */
+ .container {
+  margin-top: 20px;
+ }
+ 
+
+ /* Sections */
+ section {
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+
+ /* Form Styling */
+ .form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ }
+ 
+
+ .form-group {
+  margin-bottom: 15px;
+ }
+ 
+
+ .btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+ }
+ 
+
+ .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+ }
+ 
+
+ /* Car Cards */
+ .card {
+  margin-bottom: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+ }
+ 
+
+ .card:hover {
+  transform: translateY(-5px);
+ }
+ 
+
+ .card-img-top {
+  border-radius: 8px 8px 0 0;
+ }
+ 
+
+ /* Footer */
+ footer {
+  background-color: var(--dark-bg-color);
+  color: var(--dark-text-color);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+ }
+ 
+
+ /* Dark Mode Toggle */
+ #darkModeToggle {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+ }
+ 
+
+ #darkModeToggle:hover {
+  background-color: #d4a306;
+ }
+ 
+
+ /* Animations and Transitions */
+ button {
+  transition: background-color 0.3s, color 0.3s;
+ }
+ 
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+  .container {
+  width: 100%;
+  padding: 0 15px;
+  }
+ 
+
+  .card {
+  width: 100%;
+  }
+ }
+ 
+
+ /* Custom Styles */
+ h1,
+ h2 {
+  color: var(--primary-color);
+ }
+ 
+
+ /* Notification Styling */
+ #bookingNotification {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+ }

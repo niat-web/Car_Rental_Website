@@ -95,7 +95,7 @@
   card.classList.add('col-md-4', 'mb-4');
   card.innerHTML = `
   <div class="card">
-  <img src="${car.image}" class="card-img-top" alt="${car.make} ${car.model}">
+  
   <div class="card-body">
   <h5 class="card-title">${car.make} ${car.model}</h5>
   <p class="card-text">Year: ${car.year}</p>
@@ -122,7 +122,9 @@
   // Function to handle API data fetching and display
   async function fetchAndDisplayCars() {
   const loadingIndicator = document.getElementById('loadingIndicator');
-  loadingIndicator.style.display = 'block';
+  if (loadingIndicator) {
+    loadingIndicator.style.display = 'block'; // Show loading indicator
+}
   const carCardsContainer = document.getElementById('carCards');
   carCardsContainer.innerHTML = ''; // Clear existing cards
   try {
@@ -138,7 +140,9 @@
   console.error('Error fetching cars:', error);
   displayError('An error occurred while fetching car data.');
   } finally {
-  loadingIndicator.style.display = 'none';
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none'; // Hide loading indicator
+    }
   }
   }
  
@@ -160,6 +164,7 @@
   } catch (error) {
   const proxyUrl = `https://api.allorigins.win/raw?url=${url}`;
   const proxyResponse = await fetch(proxyUrl);
+  console.log(proxyResponse, )
   if (proxyResponse.ok) {
   return await proxyResponse.json();
   } else {
